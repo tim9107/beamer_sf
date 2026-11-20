@@ -1,0 +1,398 @@
+{
+  "events": [
+    {
+      "date": "2026-11-22",
+      "time": "",
+      "name": "Goofetheater 45",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/4/Titelbild_Goofetheater_Neu_B%C3%BChne-eb9a1db1.jpg",
+      "image": "/images/6497b09de791b1358973416c36b5ab5b25f042dbf0532b6fb0d07ec60bc8856c.jpg"
+    },
+    {
+      "date": "2026-11-25",
+      "time": "20:00",
+      "name": "POWERPOINT KARAOKE",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/b/Powerpoint%20Karaoke_Bild-6441cc55.jpg",
+      "image": "/images/b55def8ee3c3761f5ff998a7ec146a391bb653286918597803ee1a805c3ddc1a.jpg"
+    },
+    {
+      "date": "2026-11-28",
+      "time": "10:00",
+      "name": "Weihnachtszauber-Markt 2026",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/c/Weihnachtszauber-Markt-1f03310d.png",
+      "image": "/images/90195b1cf03a969954efd415d4b272b6b5cbd936da8fd7e4d4a4ccc15acc0a6b.png"
+    },
+    {
+      "date": "2026-11-29",
+      "time": "10:00",
+      "name": "Weihnachtszauber-Markt 2026",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/c/Weihnachtszauber-Markt-1f03310d.png",
+      "image": "/images/90195b1cf03a969954efd415d4b272b6b5cbd936da8fd7e4d4a4ccc15acc0a6b.png"
+    },
+    {
+      "date": "2026-11-30",
+      "time": "20:00",
+      "name": "Appenzeller Lät-Night-Show",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/e/Appenzeller%20Late%20Night%20Show_AUSVERKAUFT-8bf3600e.jpg",
+      "image": "/images/27b0d8b2a360e81e3a05ef0f251f1a4fee4e09242c7a1f79a4bba3d324d2e34f.jpg"
+    },
+    {
+      "date": "2026-12-04",
+      "time": "20:00",
+      "name": "Goran Kovacevic & Peter Lenzin – Swingin’ Balkan Soul",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/0/Kovacevic-Lenzin%201%20by%20Thomas%20Biasotto-4f131f82.jpg",
+      "image": "/images/ed803eace5e8b4694b294153577b0dbac331e493ef65329e49ac752e53f1cf69.jpg"
+    },
+    {
+      "date": "2026-12-06",
+      "time": "10:00",
+      "name": "NOMAL!",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/d/Logo_2023_angepasst_1-c3ec86b9.jpg",
+      "image": "/images/4744ab522a10437f04e3e2d4807af6f9a434a1af127b8c8627ee56587709ea99.jpg"
+    },
+    {
+      "date": "2026-12-12",
+      "time": "15:00",
+      "name": "Das Sams - Im Appenzellerland",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/5/Sams_Bild_Header_Webseite_STF-81cb4c51.jpeg",
+      "image": "/images/f03e74e16ba726b198ae0d972590d1514474b23b0c2ac9f4a6288aa5627e9fd3.jpeg"
+    },
+    {
+      "date": "2026-12-13",
+      "time": "15:00",
+      "name": "Das Sams - Im Appenzellerland",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/5/Sams_Bild_Header_Webseite_STF-81cb4c51.jpeg",
+      "image": "/images/f03e74e16ba726b198ae0d972590d1514474b23b0c2ac9f4a6288aa5627e9fd3.jpeg"
+    },
+    {
+      "date": "2026-12-14",
+      "time": "20:00",
+      "name": "Appenzeller Lät-Night-Show",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/e/Flyer%20Appenzeller%20Late%20Night%20Show_Neutral_Moment-c27bb532.jpg",
+      "image": "/images/a1eca4c9dac0c086271b4164f7e365049e1c910652ceb1f33ff27aeeb12f8baa.jpg"
+    },
+    {
+      "date": "2026-12-15",
+      "time": "20:00",
+      "name": "Giuliano Musio",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/7/Giuliano%20Musio-2dbd78c9.jpeg",
+      "image": "/images/19dfa381bf9bf6fc019b711aed3f8a96b43a93a53efc58a913a063499f83551a.jpeg"
+    },
+    {
+      "date": "2026-12-19",
+      "time": "15:00",
+      "name": "Das Sams - Im Appenzellerland",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/5/Sams_Bild_Header_Webseite_STF-81cb4c51.jpeg",
+      "image": "/images/f03e74e16ba726b198ae0d972590d1514474b23b0c2ac9f4a6288aa5627e9fd3.jpeg"
+    },
+    {
+      "date": "2026-12-20",
+      "time": "15:00",
+      "name": "Das Sams - Im Appenzellerland",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/5/Sams_Bild_Header_Webseite_STF-81cb4c51.jpeg",
+      "image": "/images/f03e74e16ba726b198ae0d972590d1514474b23b0c2ac9f4a6288aa5627e9fd3.jpeg"
+    },
+    {
+      "date": "2027-01-07",
+      "time": "20:00",
+      "name": "Bodan Art Orchestra",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/a/image009-822130ce.jpg",
+      "image": "/images/acb0c06e6eac0095e6c3f50fe4d1e24c6db4c9e7454161105dcc7d79f7a57d3e.jpg"
+    },
+    {
+      "date": "2027-01-09",
+      "time": "20:00",
+      "name": "Schuppelzaure 2027",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/e/Schuppelzaure-bc65e304.png",
+      "image": "/images/656f4a070c5a0ffae6566cf428b95caef790b05df4d80005a491a2987e0770ba.png"
+    },
+    {
+      "date": "2027-01-10",
+      "time": "10:00",
+      "name": "NOMAL!",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/d/Logo_2023_angepasst_1-c3ec86b9.jpg",
+      "image": "/images/4744ab522a10437f04e3e2d4807af6f9a434a1af127b8c8627ee56587709ea99.jpg"
+    },
+    {
+      "date": "2027-01-14",
+      "time": "20:00",
+      "name": "«Komiktheater GHG Sonnenhalde Tandem»",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/d/Komiktheater%202027-1dbbd6ca.jpeg",
+      "image": "/images/1e7c725a4f573415fd0cdeb62b90d1875096582f47ac7ecfc660691d85ab9b15.jpeg"
+    },
+    {
+      "date": "2027-01-16",
+      "time": "16:00",
+      "name": "«Komiktheater GHG Sonnenhalde Tandem»",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/d/Komiktheater%202027-1dbbd6ca.jpeg",
+      "image": "/images/1e7c725a4f573415fd0cdeb62b90d1875096582f47ac7ecfc660691d85ab9b15.jpeg"
+    },
+    {
+      "date": "2027-01-19",
+      "time": "20:00",
+      "name": "GRAND HOTEL HÖGLENEGG",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/d/H%C3%B6glenegg-308d8a56.jpg",
+      "image": "/images/03e18d4d6e013b43949faa54a737f29d04b788460ca23712311e56f401aa5543.jpg"
+    },
+    {
+      "date": "2027-01-21",
+      "time": "19:30",
+      "name": "ALLES wird GUT",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/0/ALLES%20wird%20GUT-a0ef5c3d.jpg",
+      "image": "/images/b26a30e464e0ce8c36fcadba6e5d8dc65582863037106ddfc7c1e58106edacd3.jpg"
+    },
+    {
+      "date": "2027-01-22",
+      "time": "19:30",
+      "name": "ALLES wird GUT",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/0/ALLES%20wird%20GUT-a0ef5c3d.jpg",
+      "image": "/images/b26a30e464e0ce8c36fcadba6e5d8dc65582863037106ddfc7c1e58106edacd3.jpg"
+    },
+    {
+      "date": "2027-01-23",
+      "time": "",
+      "name": "Goofetheater 46",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/4/Titelbild_Goofetheater_Neu_B%C3%BChne-eb9a1db1.jpg",
+      "image": "/images/6497b09de791b1358973416c36b5ab5b25f042dbf0532b6fb0d07ec60bc8856c.jpg"
+    },
+    {
+      "date": "2027-01-23",
+      "time": "19:30",
+      "name": "ALLES wird GUT",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/0/ALLES%20wird%20GUT-a0ef5c3d.jpg",
+      "image": "/images/b26a30e464e0ce8c36fcadba6e5d8dc65582863037106ddfc7c1e58106edacd3.jpg"
+    },
+    {
+      "date": "2027-01-24",
+      "time": "",
+      "name": "Goofetheater 46",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/4/Titelbild_Goofetheater_Neu_B%C3%BChne-eb9a1db1.jpg",
+      "image": "/images/6497b09de791b1358973416c36b5ab5b25f042dbf0532b6fb0d07ec60bc8856c.jpg"
+    },
+    {
+      "date": "2027-01-24",
+      "time": "16:00",
+      "name": "ALLES wird GUT",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/0/ALLES%20wird%20GUT-a0ef5c3d.jpg",
+      "image": "/images/b26a30e464e0ce8c36fcadba6e5d8dc65582863037106ddfc7c1e58106edacd3.jpg"
+    },
+    {
+      "date": "2027-01-25",
+      "time": "20:00",
+      "name": "Appenzeller Lät-Night-Show",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/2/Flyer-5e251deb.png",
+      "image": "/images/3f1014b726772823ba01001673ff0afbaeee5dfc008b222f3e28c5213d343251.png"
+    },
+    {
+      "date": "2027-02-07",
+      "time": "10:00",
+      "name": "NOMAL!",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/d/Logo_2023_angepasst_1-c3ec86b9.jpg",
+      "image": "/images/4744ab522a10437f04e3e2d4807af6f9a434a1af127b8c8627ee56587709ea99.jpg"
+    },
+    {
+      "date": "2027-02-13",
+      "time": "20:00",
+      "name": "Kellerheims im Trio",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/8/01_Kellerheims_im_Trio-54f5ab12.jpeg",
+      "image": "/images/7ce9d5996267ac9100a429d4f9fa18ea1a890ae50fbf15964519e95861e2b436.jpeg"
+    },
+    {
+      "date": "2027-02-16",
+      "time": "20:00",
+      "name": "GRAND HOTEL HÖGLENEGG",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/d/H%C3%B6glenegg-308d8a56.jpg",
+      "image": "/images/03e18d4d6e013b43949faa54a737f29d04b788460ca23712311e56f401aa5543.jpg"
+    },
+    {
+      "date": "2027-02-21",
+      "time": "17:00",
+      "name": "Helewie! (Welturaufführung)",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/e/Helewie-58b210b8.jpg",
+      "image": "/images/238901b9a544c5eee89dcf66d2d275150371e2086141f395e120699ca34d2d4e.jpg"
+    },
+    {
+      "date": "2027-02-22",
+      "time": "20:00",
+      "name": "Appenzeller Lät-Night-Show",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/2/Flyer-5e251deb.png",
+      "image": "/images/3f1014b726772823ba01001673ff0afbaeee5dfc008b222f3e28c5213d343251.png"
+    },
+    {
+      "date": "2027-03-04",
+      "time": "20:00",
+      "name": "Das Fundbüro",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/4/Fundb%C3%BCro_PabloJucker_01_Web-d4e00701.jpg",
+      "image": "/images/32c7ed317a24c462381879299031fa52774c5d667f542ec4adb9aa610c76cd0d.jpg"
+    },
+    {
+      "date": "2027-03-07",
+      "time": "10:00",
+      "name": "NOMAL!",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/d/Logo_2023_angepasst_1-c3ec86b9.jpg",
+      "image": "/images/4744ab522a10437f04e3e2d4807af6f9a434a1af127b8c8627ee56587709ea99.jpg"
+    },
+    {
+      "date": "2027-03-09",
+      "time": "20:00",
+      "name": "GRAND HOTEL HÖGLENEGG",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/d/H%C3%B6glenegg-308d8a56.jpg",
+      "image": "/images/03e18d4d6e013b43949faa54a737f29d04b788460ca23712311e56f401aa5543.jpg"
+    },
+    {
+      "date": "2027-03-13",
+      "time": "",
+      "name": "Goofetheater 47",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/4/Titelbild_Goofetheater_Neu_B%C3%BChne-eb9a1db1.jpg",
+      "image": "/images/6497b09de791b1358973416c36b5ab5b25f042dbf0532b6fb0d07ec60bc8856c.jpg"
+    },
+    {
+      "date": "2027-03-13",
+      "time": "20:00",
+      "name": "Mateo Gudenrath",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/a/Mateo-e2bdc844.jpg",
+      "image": "/images/0a724d970179f4b20b735944002ad784821c3c86edfb27975f71ec53abb47d5e.jpg"
+    },
+    {
+      "date": "2027-03-14",
+      "time": "",
+      "name": "Goofetheater 47",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/4/Titelbild_Goofetheater_Neu_B%C3%BChne-eb9a1db1.jpg",
+      "image": "/images/6497b09de791b1358973416c36b5ab5b25f042dbf0532b6fb0d07ec60bc8856c.jpg"
+    },
+    {
+      "date": "2027-03-16",
+      "time": "10:30",
+      "name": "Theater Lenz 2027 - Zyklus 1",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/d/Theater%20Lenz_Hasenmama-935fc98f.jpg",
+      "image": "/images/ff06ff9028020d6e664e08af12514d6ca35c8c75b6cc0f1b61ad5c167a572b53.jpg"
+    },
+    {
+      "date": "2027-03-19",
+      "time": "10:00",
+      "name": "Theater Lenz 2027 - Zyklus 3",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/4/Theater%20Lenz_It%20Depends-ba468ac9.jpg",
+      "image": "/images/c9dee82acfe061b3687854773224994738fd0d67bc8709f3201e33c0ff381abc.jpg"
+    },
+    {
+      "date": "2027-03-19",
+      "time": "20:00",
+      "name": "Valerio Moser",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/c/Valerio%20Moser-e0948a36.jpg",
+      "image": "/images/7fb06650f2d1e6695c7c3ff8361727d83ccdfb648e154b3f7966d0c82d7e5203.jpg"
+    },
+    {
+      "date": "2027-03-22",
+      "time": "20:00",
+      "name": "Appenzeller Lät-Night-Show",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/2/Flyer-5e251deb.png",
+      "image": "/images/3f1014b726772823ba01001673ff0afbaeee5dfc008b222f3e28c5213d343251.png"
+    },
+    {
+      "date": "2027-03-30",
+      "time": "10:00",
+      "name": "Theater Lenz 2027 - Zyklus 2",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/4/Theater%20Lenz_OMG-7577211b.jpg",
+      "image": "/images/419126dd11356f0a66bc2e53e4299afb9bad5649c93c6e997fc07eeec8241c54.jpg"
+    },
+    {
+      "date": "2027-04-04",
+      "time": "10:00",
+      "name": "NOMAL!",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/d/Logo_2023_angepasst_1-c3ec86b9.jpg",
+      "image": "/images/4744ab522a10437f04e3e2d4807af6f9a434a1af127b8c8627ee56587709ea99.jpg"
+    },
+    {
+      "date": "2027-04-06",
+      "time": "20:00",
+      "name": "GRAND HOTEL HÖGLENEGG",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/d/H%C3%B6glenegg-308d8a56.jpg",
+      "image": "/images/03e18d4d6e013b43949faa54a737f29d04b788460ca23712311e56f401aa5543.jpg"
+    },
+    {
+      "date": "2027-04-17",
+      "time": "20:00",
+      "name": "Herisauer Bühne",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/a/Herisauer%20B%C3%BChne%20H%C3%A4sch%20en%20Vogel-fd84c094.jpg",
+      "image": "/images/053972d5b4d69481df31815f939987fcae973b874fb64cc7cf7b28aae8ea425b.jpg"
+    },
+    {
+      "date": "2027-04-18",
+      "time": "16:00",
+      "name": "Herisauer Bühne",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/a/Herisauer%20B%C3%BChne%20H%C3%A4sch%20en%20Vogel-fd84c094.jpg",
+      "image": "/images/053972d5b4d69481df31815f939987fcae973b874fb64cc7cf7b28aae8ea425b.jpg"
+    },
+    {
+      "date": "2027-04-21",
+      "time": "20:00",
+      "name": "Herisauer Bühne",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/a/Herisauer%20B%C3%BChne%20H%C3%A4sch%20en%20Vogel-fd84c094.jpg",
+      "image": "/images/053972d5b4d69481df31815f939987fcae973b874fb64cc7cf7b28aae8ea425b.jpg"
+    },
+    {
+      "date": "2027-04-22",
+      "time": "20:00",
+      "name": "Herisauer Bühne",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/a/Herisauer%20B%C3%BChne%20H%C3%A4sch%20en%20Vogel-fd84c094.jpg",
+      "image": "/images/053972d5b4d69481df31815f939987fcae973b874fb64cc7cf7b28aae8ea425b.jpg"
+    },
+    {
+      "date": "2027-04-23",
+      "time": "20:00",
+      "name": "Herisauer Bühne",
+      "manual": false,
+      "image_url": "https://stuhlfabrik-herisau.ch/assets/images/a/Herisauer%20B%C3%BChne%20H%C3%A4sch%20en%20Vogel-fd84c094.jpg",
+      "image": "/images/053972d5b4d69481df31815f939987fcae973b874fb64cc7cf7b28aae8ea425b.jpg"
+    }
+  ],
+  "updated": "2026-11-20T07:39",
+  "source": "Live von stuhlfabrik-herisau.ch"
+}

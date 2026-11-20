@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111213">
+  <title>Veranstaltungen · Stuhlfabrik Herisau</title>
+  <style>
+    :root{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:#f8f6f1;background:#111213;font-synthesis:none}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 88% 0%,#31271e 0,transparent 48%),#111213;display:flex;flex-direction:column}
+    header{display:flex;align-items:center;justify-content:space-between;padding:20px 4vw 16px;gap:16px;border-bottom:1px solid #393939}
+    .brand{font-size:clamp(15px,1.35vw,24px);letter-spacing:.2em;text-transform:uppercase;font-weight:850}
+    .sub{font-size:12px;color:#a6a3a0;letter-spacing:.12em;margin-top:7px}
+    .controls,.deck{display:flex;align-items:center;gap:9px}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    button{font:inherit;color:#f5f3ef;background:#292a2a;border:1px solid #505050;padding:10px 14px;border-radius:11px;cursor:pointer}
+    button:hover{background:#444}
+    button:focus-visible{outline:3px solid #deac69;outline-offset:3px}
+    button.primary{background:#deac69;color:#171513;border-color:#deac69;font-weight:800}
+    select{font:inherit;color:#f5f3ef;background:#292a2a;border:1px solid #505050;padding:10px 12px;border-radius:11px}
+    .file-input{display:none}
+    main{padding:2vh 4vw 1vh;display:flex;flex:1;min-height:0;flex-direction:column}
+    .eyebrow{color:#deac69;text-transform:uppercase;letter-spacing:.2em;font-size:clamp(11px,1vw,16px);font-weight:750;margin:0 0 12px}
+    .stage{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);flex:1;min-height:390px;overflow:hidden;background:linear-gradient(120deg,#202122,#171717);border:1px solid #373737;border-radius:22px;box-shadow:0 24px 70px #0006}
+    .copy{display:flex;flex-direction:column;justify-content:center;padding:clamp(25px,5vw,90px);min-width:0;z-index:1}
+    .date{font-size:clamp(19px,2vw,34px);color:#deac69;font-weight:850}
+    .time{font-size:clamp(15px,1.3vw,23px);font-weight:650;color:#c2bdb7;margin-top:8px}
+    .event-title{max-width:100%;font-size:clamp(32px,4.2vw,72px);line-height:1.04;font-weight:850;letter-spacing:-.055em;overflow-wrap:normal;hyphens:none;margin:28px 0}
+    .title-word{display:inline-block;white-space:nowrap}
+    .location{font-size:clamp(13px,1.1vw,18px);color:#a6a3a0;letter-spacing:.12em;text-transform:uppercase}
+    .artwork{position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(ellipse at 50% 40%,#5e4934 0,#29231d 50%,#171717 100%);min-width:0}
+    .artwork:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#202122 0%,#20212255 28%,transparent 75%);z-index:1;pointer-events:none}
+    .artwork img{width:100%;height:100%;object-fit:contain;position:relative;z-index:0;padding:clamp(14px,3vw,48px)}
+    .artwork-empty{position:absolute;text-align:center;color:#e5c195;font-size:clamp(24px,3vw,52px);font-weight:850;letter-spacing:.18em;line-height:1.45;opacity:.72}
+    .stage.image-only{grid-template-columns:1fr}
+    .stage.image-only .copy{display:none}
+    .stage.image-only .artwork{grid-column:1/-1}
+    .stage.image-only .artwork:before{display:none}
+    .stage.image-only .artwork img{object-fit:contain;padding:clamp(10px,2vw,32px)}
+    .deck{padding:15px 2px 2px}
+    .progress{height:4px;background:#383838;flex:1;border-radius:9px;overflow:hidden}
+    .progress span{display:block;height:100%;width:0;background:#deac69}
+    .progress span.playing{animation:advance 15s linear forwards}
+    @keyframes advance{to{width:100%}}
+    #counter{font-variant-numeric:tabular-nums;color:#c2bdb7;font-size:14px;min-width:65px;text-align:right}
+    footer{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:12px 4vw 14px;color:#96928f;font-size:12px}
+    #status{max-width:80%}
+    .minimal header,.minimal .eyebrow,.minimal .deck,.minimal footer{display:none}
+    .minimal main{padding:2vh 2vw}
+    .minimal .stage{border:0;border-radius:0;box-shadow:none;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);background:#111213}
+    .minimal .copy{padding:clamp(20px,4vw,64px);padding-right:clamp(28px,5vw,80px)}
+    .minimal .event-title{font-size:clamp(36px,4.8vw,78px);margin:24px 0}
+    .minimal .location,.minimal .time{display:none}
+    .minimal .artwork{background:#111213}
+    .minimal .artwork:before{display:none}
+    .minimal .artwork img{padding:clamp(8px,2vw,32px)}
+    @media(max-width:700px){
+      header{padding:16px 4vw;align-items:flex-start;flex-direction:column}
+      main{padding:18px 4vw}
+      .stage,.minimal .stage{grid-template-columns:1fr;grid-template-rows:minmax(230px,1fr) auto;min-height:72vh}
+      .copy,.minimal .copy{padding:22px}
+      .event-title,.minimal .event-title{font-size:clamp(32px,8vw,50px);margin:18px 0}
+      .artwork{grid-row:1;min-height:250px}
+      .artwork:before{background:linear-gradient(0deg,#202122 0%,transparent 55%)}
+      .minimal .artwork:before{display:none}
+      footer{padding:10px 4vw}
+      .controls{width:100%;flex-wrap:wrap}
+      .controls button{padding:9px 11px}
+      .controls select{padding:9px 10px}
+    }
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <header>
+    <div><div class="brand">Stuhlfabrik Herisau</div><div class="sub">KULTUR · THEATER · EVENTS</div></div>
+    <div class="controls">
+      <label class="sr-only" for="rangeSelect">Angezeigter Zeitraum</label>
+      <select id="rangeSelect" aria-label="Angezeigter Zeitraum">
+        <option value="1">1 Monat</option>
+        <option value="3">3 Monate</option>
+        <option value="6" selected>6 Monate</option>
+        <option value="all">Alle kommenden</option>
+      </select>
+      <button id="imageButton" type="button">Eigenes Bild</button>
+      <button id="removeImageButton" type="button" hidden>Bild entfernen</button>
+      <input id="imageFile" class="file-input" type="file" accept="image/*">
+      <button id="modeButton" type="button">Name · Bild · Datum</button>
+      <button id="pauseButton" type="button">Ⅱ Pause</button>
+      <button id="fullscreenButton" class="primary" type="button">⛶ Vollbild</button>
+    </div>
+  </header>
+  <main>
+    <div class="eyebrow">Zeitraum: <span id="rangeName">6 Monate</span> · <span id="total">…</span> Folien</div>
+    <section class="stage" id="stage" aria-live="polite">
+      <div class="copy">
+        <div class="date" id="eventDate">…</div>
+        <div class="time" id="eventTime"></div>
+        <div class="event-title" id="eventName">Veranstaltungen werden geladen</div>
+        <div class="location">Stuhlfabrik Herisau</div>
+      </div>
+      <div class="artwork">
+        <div class="artwork-empty" id="fallback">STUHLFABRIK<br>HERISAU</div>
+        <img id="eventImage" alt="" hidden>
+      </div>
+    </section>
+    <nav class="deck" aria-label="Diashow-Steuerung">
+      <button id="previousButton" type="button" aria-label="Vorherige Veranstaltung">←</button>
+      <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+      <button id="nextButton" type="button" aria-label="Nächste Veranstaltung">→</button>
+      <span id="counter">– / –</span>
+    </nav>
+  </main>
+  <footer><span id="status">Veranstaltungen werden geladen …</span><span id="clock"></span></footer>
+  <script>
+    (() => {
+      "use strict";
+      const CACHE_KEY = "stuhlfabrik-pages-events-v1";
+      const RANGE_KEY = "stuhlfabrik-pages-range-v1";
+      const IMAGE_DB = "stuhlfabrik-pages-image-v1";
+      const IMAGE_STORE = "custom-images";
+      const IMAGE_ID = "personal-slide";
+      const MAX_IMAGE_BYTES = 20 * 1024 * 1024;
+      const SLIDE_MS = 15000;
+      const months = ["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
+      const $ = id => document.getElementById(id);
+      let allEvents = [];
+      let slides = [];
+      let slideIndex = 0;
+      let paused = false;
+      let minimal = false;
+      let customImage = null;
+      let customImageUrl = "";
+      let selectedRange = "6";
+
+      function zurichToday() {
+        return new Intl.DateTimeFormat("sv-SE", {timeZone:"Europe/Zurich"}).format(new Date());
+      }
+
+      function eventKey(item) {
+        if (item.customImage) return IMAGE_ID;
+        return `${item.date}|${item.time || ""}|${String(item.name).trim().toLocaleLowerCase()}`;
+      }
+
+      function cleanEvents(items) {
+        const today = zurichToday();
+        const lastDay = selectedRange === "all" ? null : sixMonthsFromTodayWithMonths(today, Number(selectedRange));
+        const seen = new Set();
+        return items.filter(item => {
+          if (!item || typeof item.name !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(item.date || "")) return false;
+          if (item.date < today || (lastDay && item.date > lastDay) || !item.name.trim()) return false;
+          const key = eventKey(item);
+          if (seen.has(key)) return false;
+          seen.add(key);
+          return true;
+        }).sort((a,b) => a.date.localeCompare(b.date) || String(a.time || "").localeCompare(String(b.time || "")) || a.name.localeCompare(b.name, "de"));
+      }
+
+      function sixMonthsFromTodayWithMonths(day, monthsToAdd) {
+        const [year, month, date] = day.split("-").map(Number);
+        const monthStart = new Date(Date.UTC(year, month - 1 + monthsToAdd, 1));
+        const lastDay = new Date(Date.UTC(monthStart.getUTCFullYear(), monthStart.getUTCMonth() + 1, 0)).getUTCDate();
+        monthStart.setUTCDate(Math.min(date, lastDay));
+        return monthStart.toISOString().slice(0, 10);
+      }
+
+      function render() {
+        const previous = slides[slideIndex] ? eventKey(slides[slideIndex]) : "";
+        slides = cleanEvents(allEvents);
+        if (customImage) slides.push({customImage:true,name:"Eigenes Bild",image:customImageUrl});
+        const rangeOption = $("rangeSelect").selectedOptions[0];
+        $("rangeName").textContent = rangeOption.textContent;
+        $("total").textContent = String(slides.length);
+        const retainedIndex = slides.findIndex(item => eventKey(item) === previous);
+        slideIndex = retainedIndex >= 0 ? retainedIndex : Math.min(slideIndex, Math.max(0, slides.length - 1));
+        if (!slides.length) {
+          $("stage").classList.remove("image-only");
+          $("eventDate").textContent = "Programm";
+          $("eventTime").textContent = "";
+          $("eventName").textContent = "Zurzeit sind keine Veranstaltungen eingetragen.";
+          $("eventImage").hidden = true;
+          $("fallback").hidden = false;
+          $("counter").textContent = "0 / 0";
+          restartProgress();
+          return;
+        }
+
+        const item = slides[slideIndex];
+        $("stage").classList.toggle("image-only", Boolean(item.customImage));
+        if (item.customImage) {
+          $("eventDate").textContent = "";
+          $("eventTime").textContent = "";
+          $("eventName").textContent = item.name;
+          $("counter").textContent = `${slideIndex + 1} / ${slides.length}`;
+          const image = $("eventImage");
+          image.onerror = () => {
+            image.hidden = true;
+            $("fallback").hidden = false;
+          };
+          image.hidden = false;
+          image.src = item.image;
+          image.alt = "Eigenes Bild";
+          $("fallback").hidden = true;
+          restartProgress();
+          return;
+        }
+        const [year, month, day] = item.date.split("-").map(Number);
+        $("eventDate").textContent = `${day}. ${months[month - 1]} ${year}`;
+        $("eventTime").textContent = item.time ? `${item.time} Uhr` : "Uhrzeit noch offen";
+        const title = $("eventName");
+        title.replaceChildren();
+        item.name.trim().split(/\s+/).forEach((word, index) => {
+          if (index) title.append(" ");
+          const part = document.createElement("span");
+          part.className = "title-word";
+          part.textContent = word;
+          title.append(part);
+        });
+        $("counter").textContent = `${slideIndex + 1} / ${slides.length}`;
+
+        const image = $("eventImage");
+        image.onerror = () => {
+          image.hidden = true;
+          $("fallback").hidden = false;
+        };
+        const imagePath = item.image || item.image_url || "";
+        image.hidden = !imagePath;
+        $("fallback").hidden = Boolean(imagePath);
+        if (imagePath) {
+          const relativePath = imagePath.startsWith("/") ? imagePath.slice(1) : imagePath;
+          image.src = new URL(relativePath, document.baseURI).href;
+          image.alt = `Veranstaltungsbild: ${item.name}`;
+        } else {
+          image.removeAttribute("src");
+          image.alt = "";
+        }
+        restartProgress();
+      }
+
+      function restartProgress() {
+        const bar = $("progressBar");
+        bar.classList.remove("playing");
+        bar.style.width = "";
+        if (!paused && slides.length > 1 && !minimal) {
+          void bar.offsetWidth;
+          bar.classList.add("playing");
+        }
+      }
+
+      function move(amount) {
+        if (slides.length < 2) return;
+        slideIndex = (slideIndex + amount + slides.length) % slides.length;
+        render();
+      }
+
+      function setMode(value) {
+        minimal = value;
+        document.body.classList.toggle("minimal", minimal);
+        $("modeButton").textContent = minimal ? "Vollansicht" : "Name · Bild · Datum";
+      }
+
+      function openImageDatabase() {
+        return new Promise((resolve, reject) => {
+          const request = indexedDB.open(IMAGE_DB, 1);
+          request.onupgradeneeded = () => request.result.createObjectStore(IMAGE_STORE);
+          request.onsuccess = () => resolve(request.result);
+          request.onerror = () => reject(request.error || new Error("Bildspeicher konnte nicht geöffnet werden."));
+        });
+      }
+
+      async function storeCustomImage(file) {
+        const database = await openImageDatabase();
+        await new Promise((resolve, reject) => {
+          const transaction = database.transaction(IMAGE_STORE, "readwrite");
+          transaction.objectStore(IMAGE_STORE).put({blob:file}, IMAGE_ID);
+          transaction.oncomplete = resolve;
+          transaction.onerror = () => reject(transaction.error || new Error("Bild konnte nicht gespeichert werden."));
+          transaction.onabort = () => reject(transaction.error || new Error("Bildspeicherung abgebrochen."));
+        });
+        database.close();
+      }
+
+      async function readCustomImage() {
+        const database = await openImageDatabase();
+        const record = await new Promise((resolve, reject) => {
+          const transaction = database.transaction(IMAGE_STORE, "readonly");
+          const request = transaction.objectStore(IMAGE_STORE).get(IMAGE_ID);
+          request.onsuccess = () => resolve(request.result);
+          request.onerror = () => reject(request.error || new Error("Gespeichertes Bild konnte nicht geladen werden."));
+        });
+        database.close();
+        return record;
+      }
+
+      async function removeCustomImage() {
+        const database = await openImageDatabase();
+        await new Promise((resolve, reject) => {
+          const transaction = database.transaction(IMAGE_STORE, "readwrite");
+          transaction.objectStore(IMAGE_STORE).delete(IMAGE_ID);
+          transaction.oncomplete = resolve;
+          transaction.onerror = () => reject(transaction.error || new Error("Bild konnte nicht entfernt werden."));
+          transaction.onabort = () => reject(transaction.error || new Error("Entfernen des Bildes abgebrochen."));
+        });
+        database.close();
+      }
+
+      function setCustomImage(blob) {
+        if (customImageUrl) URL.revokeObjectURL(customImageUrl);
+        customImage = blob;
+        customImageUrl = blob ? URL.createObjectURL(blob) : "";
+        $("removeImageButton").hidden = !blob;
+        render();
+      }
+
+      async function restoreCustomImage() {
+        try {
+          const record = await readCustomImage();
+          if (record && record.blob instanceof Blob) setCustomImage(record.blob);
+        } catch (error) {
+          $("status").textContent = `Eigenes Bild konnte nicht geladen werden: ${error.message}`;
+        }
+      }
+
+      function setFullscreen() {
+        if (document.fullscreenElement) document.exitFullscreen();
+        else document.documentElement.requestFullscreen().catch(() => {
+          $("status").textContent = "Vollbild nicht verfügbar – bitte F11 drücken.";
+        });
+      }
+
+      async function loadEvents() {
+        try {
+          const response = await fetch(new URL("veranstaltungen.json", document.baseURI), {cache:"no-store"});
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          const data = await response.json();
+          if (!Array.isArray(data.events)) throw new Error("Die Datei enthält keine Eventliste.");
+          allEvents = data.events;
+          localStorage.setItem(CACHE_KEY, JSON.stringify(allEvents));
+          render();
+          $("status").textContent = `Datenstand: ${data.updated || "manuell gepflegt"} · bitte wöchentlich prüfen`;
+        } catch (error) {
+          const saved = localStorage.getItem(CACHE_KEY);
+          if (saved) {
+            try {
+              allEvents = JSON.parse(saved);
+              render();
+              $("status").textContent = "Offline · zuletzt gespeicherter Datenstand";
+              return;
+            } catch (cacheError) {
+              localStorage.removeItem(CACHE_KEY);
+            }
+          }
+          $("status").textContent = `Veranstaltungen konnten nicht geladen werden: ${error.message}`;
+        }
+      }
+
+      function updateClock() {
+        $("clock").textContent = new Intl.DateTimeFormat("de-CH", {
+          timeZone:"Europe/Zurich", weekday:"short", day:"2-digit", month:"2-digit",
+          hour:"2-digit", minute:"2-digit"
+        }).format(new Date());
+      }
+
+      $("modeButton").addEventListener("click", () => setMode(!minimal));
+      $("rangeSelect").value = localStorage.getItem(RANGE_KEY) || "6";
+      if (!["1","3","6","all"].includes($("rangeSelect").value)) $("rangeSelect").value = "6";
+      selectedRange = $("rangeSelect").value;
+      $("rangeSelect").addEventListener("change", () => {
+        selectedRange = $("rangeSelect").value;
+        localStorage.setItem(RANGE_KEY, selectedRange);
+        slideIndex = 0;
+        render();
+      });
+      $("imageButton").addEventListener("click", () => $("imageFile").click());
+      $("imageFile").addEventListener("change", async event => {
+        const file = event.target.files[0];
+        event.target.value = "";
+        if (!file) return;
+        if (!file.type.startsWith("image/")) {
+          $("status").textContent = "Bitte eine Bilddatei auswählen.";
+          return;
+        }
+        if (file.size > MAX_IMAGE_BYTES) {
+          $("status").textContent = "Das Bild ist grösser als 20 MB.";
+          return;
+        }
+        try {
+          await storeCustomImage(file);
+          setCustomImage(file);
+          $("status").textContent = "Eigenes Bild gespeichert – nur auf diesem Gerät sichtbar.";
+        } catch (error) {
+          $("status").textContent = `Bild konnte nicht gespeichert werden: ${error.message}`;
+        }
+      });
+      $("removeImageButton").addEventListener("click", async () => {
+        try {
+          await removeCustomImage();
+          setCustomImage(null);
+          $("status").textContent = "Eigenes Bild entfernt.";
+        } catch (error) {
+          $("status").textContent = `Bild konnte nicht entfernt werden: ${error.message}`;
+        }
+      });
+      $("pauseButton").addEventListener("click", () => {
+        paused = !paused;
+        $("pauseButton").textContent = paused ? "▶ Weiter" : "Ⅱ Pause";
+        restartProgress();
+      });
+      $("fullscreenButton").addEventListener("click", setFullscreen);
+      $("previousButton").addEventListener("click", () => move(-1));
+      $("nextButton").addEventListener("click", () => move(1));
+      document.addEventListener("fullscreenchange", () => {
+        $("fullscreenButton").textContent = document.fullscreenElement ? "✕ Vollbild" : "⛶ Vollbild";
+      });
+      document.addEventListener("keydown", event => {
+        if (event.key === "ArrowRight") move(1);
+        if (event.key === "ArrowLeft") move(-1);
+        if (event.key.toLowerCase() === "m") setMode(!minimal);
+        if (event.key === "Escape" && minimal) {
+          event.preventDefault();
+          setMode(false);
+          if (document.fullscreenElement) document.exitFullscreen();
+        }
+        if (event.code === "Space") {
+          event.preventDefault();
+          $("pauseButton").click();
+        }
+      }, true);
+
+      updateClock();
+      loadEvents();
+      restoreCustomImage();
+      setInterval(updateClock, 30000);
+      setInterval(() => {
+        if (!paused) move(1);
+      }, SLIDE_MS);
+      setInterval(loadEvents, 5 * 60 * 1000);
+    })();
+  </script>
+</body>
+</html>

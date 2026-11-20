@@ -157,6 +157,18 @@
         }).sort((a,b) => a.date.localeCompare(b.date) || String(a.time || "").localeCompare(String(b.time || "")) || a.name.localeCompare(b.name, "de"));
       }
 
+      function fitTitle() {
+        const title = $("eventName");
+        const words = [...title.querySelectorAll(".title-word")];
+        title.style.fontSize = "";
+        if (!words.length || $("stage").classList.contains("image-only")) return;
+        const available = title.clientWidth;
+        const widest = Math.max(...words.map(word => word.getBoundingClientRect().width));
+        if (widest > available) {
+          title.style.fontSize = `${Math.max(20, parseFloat(getComputedStyle(title).fontSize) * available / widest * 0.96)}px`;
+        }
+      }
+
       function sixMonthsFromTodayWithMonths(day, monthsToAdd) {
         const [year, month, date] = day.split("-").map(Number);
         const monthStart = new Date(Date.UTC(year, month - 1 + monthsToAdd, 1));
@@ -217,6 +229,7 @@
           part.textContent = word;
           title.append(part);
         });
+        fitTitle();
         $("counter").textContent = `${slideIndex + 1} / ${slides.length}`;
 
         const image = $("eventImage");
@@ -258,6 +271,7 @@
         minimal = value;
         document.body.classList.toggle("minimal", minimal);
         $("modeButton").textContent = minimal ? "Vollansicht" : "Name · Bild · Datum";
+        requestAnimationFrame(fitTitle);
       }
 
       function openImageDatabase() {
@@ -408,6 +422,7 @@
         restartProgress();
       });
       $("fullscreenButton").addEventListener("click", setFullscreen);
+      new ResizeObserver(fitTitle).observe($("stage"));
       $("previousButton").addEventListener("click", () => move(-1));
       $("nextButton").addEventListener("click", () => move(1));
       document.addEventListener("fullscreenchange", () => {

@@ -224,7 +224,7 @@
           image.hidden = true;
           $("fallback").hidden = false;
         };
-        const imagePath = item.image || item.image_url || "";
+        const imagePath = item.image_url || item.image || "";
         image.hidden = !imagePath;
         $("fallback").hidden = Boolean(imagePath);
         if (imagePath) {
